@@ -14,7 +14,7 @@ After initiating the game with a start button, players are given one question, f
 
 ### Image assets 
 The following images were used
-* ![Image of Leopard](assets\images\leopard.jpg)
+* ![Image of Leopard](https://github.com/LucasAho/TriviaGame/blob/master/Assets/images/leopard.png?raw=true)
 * ![Image of Pig](assets\images\pig.jpg)
 * ![Image of Crow](assets\images\crow.jpg)
 * ![Image of Llama](assets\images\llama.jpg)
