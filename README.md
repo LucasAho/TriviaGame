@@ -22,7 +22,6 @@ The following images were used
 * ![Image of Octopus](https://github.com/LucasAho/TriviaGame/blob/master/assets/images/octo.jpg)
 
 ### CSS
-
-
-### CSS
+*style.css: Contains minimal typography and coloration when bootstrap could not create needed properties
+*bootstrap: linked in index.html and used to create most of the website structure
 
