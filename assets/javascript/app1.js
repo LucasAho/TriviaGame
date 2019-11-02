@@ -124,7 +124,7 @@ game = {
             game.num++;
         } 
         $("#questionBox").html(status);
-        $("#ansBox").html("The correct answer is: " + currStr);
+        $("#ansBox").html("The correct answer was: " + currStr);
         $("#phImg").html($("<img src='assets/images/" + currPic + ".jpg'>"));
     },
 
@@ -172,7 +172,7 @@ game = {
     startWrite: () => {
         console.log(corrAns);
             if(game.num === 0) {
-            $("#questionBox").append("<button type='button' id='startbtn'>Start</button>");
+            $("#phImg").append("<button type='button' id='startbtn'>Start</button>");
             $("#startbtn").on("click", function(){
                 //Summon first card
                 game.cardWriter(game.num);

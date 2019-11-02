@@ -1,10 +1,23 @@
-#startBtn {
+#timeBox {
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+}
+#questionBox {
+    font-weight: bold;
+    font-size: 30px;
+}
+#ansBox {
+    font-size: 30px;
+}
+button {
     background-color: green;
     border: none;
     padding: 5px;
-    width: 320px;
+    width: 380px;
+    font-size: 20PX;
 }
-image {
-    width: 200px;
-    height: 200px;
+img {
+    padding-left: 25%;
+
 }
