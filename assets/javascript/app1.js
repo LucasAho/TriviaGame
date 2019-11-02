@@ -45,7 +45,7 @@ var cardObjs = [
 
     },
 ];
-console.log(cardObjs.length-1);
+
 
 //Scorekeeping variables for player
 var corrAns = 0;
