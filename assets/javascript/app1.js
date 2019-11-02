@@ -45,7 +45,7 @@ var cardObjs = [
 
     },
 ];
-
+console.log(cardObjs.length-1);
 
 //Scorekeeping variables for player
 var corrAns = 0;
@@ -93,9 +93,9 @@ game = {
         }
     },
     timeInter: () => { //This function checks if all trivia questions have been used and continues game from interCards
-        if (game.num <= 5) {
+        if (game.num <= cardObjs.length-1) {
             game.cardWriter(game.num);
-        } else if (game.num > 5) {
+        } else if (game.num > cardObjs.length-1) {
             game.endCard();
             game.stopTimer();
             game.num = 0;
