@@ -10,11 +10,11 @@ var cardObjs = [
     }, 
     cardTwo = {
         quest: "What does a guinea pig do when it gets excited?",
-        ansSet: ["Binky","Peanut","Back-flip","Roll over"],
+        ansSet: ["Binky","Popcorn","Back-flip","Roll over"],
         rightAns: "1",
-        strAns: "Peanut",
+        strAns: "Popcorn",
         pic: "pig",
-        fact: "While rabbits often binky in excitement, guinea pigs will peanut. Look it up, its adorable."
+        fact: "While rabbits often binky in excitement, guinea pigs will popcorn. Look it up, its adorable."
     },   
     cardThree = {
         quest: "What is a baby llama called?",
