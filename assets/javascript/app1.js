@@ -5,44 +5,48 @@ var cardObjs = [
         ansSet: ["Snow Leopard","Tiger","Cheetah","Lion"],
         rightAns: "0",
         strAns: "Snow Leopard",
-        pic: "leopard"
-
+        pic: "leopard",
+        fact: "Snow leopard's tails grow from 32-39 inches, often almost as long as their bodies."
     }, 
     cardTwo = {
         quest: "What does a guinea pig do when it gets excited?",
         ansSet: ["Binky","Peanut","Back-flip","Roll over"],
         rightAns: "1",
         strAns: "Peanut",
-        pic: "pig"
+        pic: "pig",
+        fact: "While rabbits often binky in excitement, guinea pigs will peanut. Look it up, its adorable."
     },   
     cardThree = {
         quest: "What is a baby llama called?",
         ansSet: ["Kid","Cub","Squirt","Cria"],
         rightAns: "3",
         strAns: "Cria",
-        pic: "llama"
+        pic: "llama",
+        fact: "Llamas are called crias as babies, cria being the spanish word for 'baby'"
     },
     cardFour = {
         quest: "Where are the majority of an octopod's neurons?",
         ansSet: ["The brain", "The arms", "The stomach", "The beak"],
         rightAns: "1",
         strAns: "The arms",
-        pic: "octo"
+        pic: "octo",
+        fact: "An octopus's arms have nearly twice as many neurons as it's brain, allowing its arms to taste, touch, and move without the brain."
     },
     cardFive = {
         quest: "What is the fastest swimmer in the ocean?",
         ansSet: ["Great-White Shark", "Bottlenose Dolphin", "Sailfish", "Mako Shark"],
         rightAns: "2",
         strAns: "Sailfish",
-        pic: "sail"
+        pic: "sail",
+        fact: "Sailfish can swim up to 70mph."
     },
     cardSix =  {
         quest: "How long do crows mate?",
-        ansSet: ["For a season", "For life", "Once", "Till their baby leaves"],
+        ansSet: ["For a season", "For life", "Once", "Till their babies leave"],
         rightAns: "1",
         strAns: "For life",
-        pic: "crow"
-
+        pic: "crow",
+        fact: "Crows and ravens mate for life and often share territory with their raised children."
     },
 ];
 
@@ -58,6 +62,7 @@ var currAns = [];
 var currRig = "";
 var currStr = "";
 var currPic = "";
+var currFact = "";
 
 //Timer variables
 var timeLeft = 0;
@@ -89,7 +94,6 @@ game = {
         if (timeLeft === 0) {
             game.stopTimer();
             game.interCard("timed");
-            console.log(game.num);
         }
     },
     timeInter: () => { //This function checks if all trivia questions have been used and continues game from interCards
@@ -118,7 +122,7 @@ game = {
     //This function uses parameter from the answer checker and tells player if their guess was right, shows a related img, and gives interTime a parameter of 3 seconds
     interCard: (ans) => {
         var status = "";
-        game.interTime(3); //Change parameter to increase wait between rounds
+        game.interTime(6); //Change parameter to increase wait between rounds
         
         if(ans === "right") {
             status = "Correct!";
@@ -131,7 +135,7 @@ game = {
             game.num++;
         } 
         $("#questionBox").html(status);
-        $("#ansBox").html("The correct answer was: " + currStr);
+        $("#ansBox").html(currFact);
         $("#phImg").html($("<img src='assets/images/" + currPic + ".jpg'>"));
     },
     //Function uses parameter equal to button ID and checks if it matches the correct answer integer
@@ -163,7 +167,9 @@ game = {
         currAns = tempObj[num].ansSet;
         currRig = tempObj[num].rightAns;   
         currStr = tempObj[num].strAns; 
-        currPic = tempObj[num].pic;     
+        currPic = tempObj[num].pic;   
+        currFact = tempObj[num].fact;  
+        
         //Writes timer, question, and answer buttons to html
         $("#timeBox").text(timeLeft);
         $("#questionBox").html(currQuest);
